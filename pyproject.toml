@@ -13,14 +13,13 @@ dependencies = [
     "pytubefix>=8.4.1",
     "pre-commit>=4.0.1",
     "pytest>=8.3.3",
+    "pytest-cov>=6.0.0",
 ]
-
 
 [tool.flake8]
 max-line-length = 88
 extend-ignore = "E203, W503"
 exclude = [".git", ".venv", ".vscode"]
-
 
 [tool.black]
 line-length = 88
@@ -33,10 +32,14 @@ exclude = '''
 )/
 '''
 
-
 [tool.isort]
 profile = "black"
 
-
 [tool.pytest.ini_options]
 pythonpath = ["."]
+addopts = ["--cov", "--cov-report=html"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "raise NotImplementedError"
+]
