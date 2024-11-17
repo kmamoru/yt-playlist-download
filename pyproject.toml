@@ -8,9 +8,10 @@ dependencies = [
     "black>=24.10.0",
     "flake8-pyproject>=1.2.3",
     "flake8>=7.1.1",
-    "isort>=5.13.2",
+    "isort[pyproject]>=5.13.2",
     "pydantic>=2.9.2",
     "pytubefix>=8.4.1",
+    "pre-commit>=4.0.1",
 ]
 
 
