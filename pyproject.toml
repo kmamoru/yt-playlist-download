@@ -5,6 +5,30 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
+    "black>=24.10.0",
+    "isort>=5.13.2",
     "pydantic>=2.9.2",
     "pytubefix>=8.4.1",
 ]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | \.vscode
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+
+[tool.isort]
+profile = "black"
